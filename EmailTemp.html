@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+           body {
+            background-color: rgb(230, 230, 230);
+            margin: 0;
+            padding: 0;
+           }
+
+           .flexbox_container {
+            display: flex;
+            background: linear-gradient(180deg, silver, rgb(109, 109, 255));
+            border-radius: 25px 25px 25px 25px;
+            flex-direction: column;
+            padding: 20px 20px 20px 20px;
+            margin: 40px 40px 40px 40px;
+           }
+
+           .eventdetails {
+            display:flex;
+           }
+
+           .detailstext {
+            font-size: 18px;
+           }
+
+           .horizontal_input{
+            margin-top: 16px;
+           }
+
+           .RSVP {
+            display: flex;
+            flex-direction: column;
+           }
+
+           .Agenda {
+            display:flex;
+           }
+           #add_event {
+            margin: 12px 12px 12px 12px;
+           }
+
+           table {
+            border: 3px solid black;
+            border-collapse: collapse;
+           }
+
+           th {
+            border: 3px solid black;
+           }
+
+           td {
+            border: 3px solid black;
+           }
+
+           .footer {
+            display: flex;
+            flex-direction: column;
+            background-color: black;
+            align-items: center;
+           }
+        </style>
+        <title>Email Template</title>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Good Stuff Product Launch Template</h1>
+            <h3 style="margin-left: 50px;">Fill out and submit the form:</h3>
+        </div>
+        <div class="flexbox_container">
+            <h1>Event Information:</h1>
+            <div class="eventdetails">
+                <p class="detailstext">The Product Launch will take place on:</p>
+                <form class="horizontal_input">
+                    <input type="date" id="event_date">
+                </form>
+                <p class=detailstext>* and will be located at:</p>
+                <form class="horizontal_input">
+                    <input type="text" id="location">
+                </form>
+                <p class="detailtext">*</p>
+            </div>
+            <h1>RSVP Information:</h1>
+            <div class="RSVP">
+                <p class="rsvptext">Full Name(s)*</p>
+                <form>
+                    <input type="text" id="rsvpnames" value="(Demonstration Only)">
+                </form>
+                <p class="rsvptext">Email*</p>
+                <form>
+                    <input type="text" id="email" value="(Demonstration Only)">
+                </form>
+                <p class="rsvptext">Phone Number*</p>
+                <form>
+                    <input type="tel" id="number" value="(Demonstration Only)">
+                </form>
+                <p></p>
+                <form>
+                    <input type="radio" id="include" name="including">
+                    <label for="include">Include RSVP</label>
+                    <br>
+                    <input type="radio" id="dont_include" name="including">
+                    <label for="dont_include">Don't Include RSVP</label>
+                </form>
+            </div>
+            <h1>Event Agenda:</h1>
+            <div class="Agenda">
+                <p>Time:</p>
+                <form class="horizontal_input">
+                    <input type="time" id="time">
+                </form>
+                <p>Event:</p>
+                <form class="horizontal_input">
+                    <input type="text" id="event_name">
+                </form>
+                <input type="button" id="add_event" value="Add Event">
+            </div>
+            <p></p>
+            <!-- This table looks a little barebones, but it should, because if I knew how, I would use
+            Javascript to make the table update with every press of the "add_event" button -->
+            <div class="event_table">
+                <table>
+                    <tr>
+                        <th>Time</th>
+                        <th>Event</th>
+                    </tr>
+                    <tr>
+                        <td>(Input information above)</td>
+                        <td>(Input information above)</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="submit_template">
+                <h2>Submit the template to get your finished email:</h2>
+                <form>
+                    <button type="submit" value="Submit" id="final_submit">Submit</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer">
+            <h2 style="color: silver;">This template was created by the team at Good Stuff co.</h2>
+            <a href="https://atorres502.github.io/Atorres/" style="font-style: underline; color: silver; font-size: 18px;">Original Website</a>
+            <h4 style="color: silver;">Author: Alejandro Torres</h4>
+        </div>
+    </body>
+</html>
